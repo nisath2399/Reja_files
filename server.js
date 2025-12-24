@@ -5,7 +5,7 @@ const http = require("http");
 
 //1 expressga kirib kevotgan ma`lumotlarni yozamiz
 //1: Kirish code
-app.use = express(express.static("public"));
+app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
