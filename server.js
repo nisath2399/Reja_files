@@ -28,7 +28,7 @@ app.set("view engine", "ejs");
 app.post("/create-item", (req, res) =>{
     console.log(req.body);
 });
-app.get("/", function(req, res) {
+app.get("/", (req, res) => {
     res.render("harid")
 });
 
