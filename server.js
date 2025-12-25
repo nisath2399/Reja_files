@@ -2,6 +2,16 @@ console.log("Web serverni boshlash");
 const express = require("express");
 const app = express();
 const http = require("http");
+const fs = require("fs");
+
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+    if (err) {
+        console.log("ERROR:", err);
+    } else {
+        user = JSON.parse(data);
+    }
+});
 
 //1 expressga kirib kevotgan ma`lumotlarni yozamiz
 //1: Kirish code
@@ -17,17 +27,15 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //4 routing code
-// app.get("/", function(req, res) {
-//     // res.end(`<h1 style="background: blue">Hello world</h1>`);
-//     res.end("Hello world");
-//     });
 
-// app.get("/", function(req, res) {
-//     res.end("<h1>Siz sovg`alar bo`limidasiz</h1>");
-//     });
 app.post("/create-item", (req, res) =>{
     console.log(req.body);
 });
+
+app.get('/author', (req, res) => {
+    res.render('author', { user: user });
+});
+
 app.get("/", (req, res) => {
     res.render("harid")
 });
@@ -38,3 +46,4 @@ let PORT = 3000;
 server.listen(PORT, function() {
     console.log(`The server is running on port: ${PORT}`);
 });
+ 
