@@ -1,1 +1,249 @@
-<div>Hello Miya you are in Authors!</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Portfolio</title>
+
+  <link rel="stylesheet" href="/main.css" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+<div class="frame">
+  <div class="main_frame">
+
+    <!-- ================= LEFT SIDEBAR ================= -->
+    <div class="left_frame">
+
+      <!-- PROFILE -->
+      <div class="left_1">
+        <div class="left_1-1">
+          <img src="/author/images/profile.png" alt="profile">
+        </div>
+
+        <div class="left_1-2">
+          <h3>Marcos</h3>
+          <p>Heart</p>
+        </div>
+
+        <!-- SOCIAL ICONS (STATIC, CSS BUZILMAYDI) -->
+        <div class="left_icons">
+
+          <div class="icon_box">
+            <img class="icon_bg" src="/author/box_images/ellipse.png" alt="">
+            <img class="icon_fg" src="/author/icon/Icons-facebook.png" alt="facebook">
+          </div>
+
+          <div class="icon_box">
+            <img class="icon_bg" src="/author/box_images/ellipse.png" alt="">
+            <img class="icon_fg" src="/author/icon/Icons-instagram.png" alt="instagram">
+          </div>
+
+          <div class="icon_box">
+            <img class="icon_bg" src="/author/box_images/ellipse.png" alt="">
+            <img class="icon_fg" src="/author/icon/Icons-twitter.png" alt="twitter">
+          </div>
+
+          <div class="icon_box">
+            <img class="icon_bg" src="/author/box_images/ellipse.png" alt="">
+            <img class="icon_fg" src="/author/icon/Icons-linkedin.png" alt="linkedin">
+          </div>
+
+          <div class="icon_box">
+            <img class="icon_bg" src="/author/box_images/ellipse.png" alt="">
+            <img class="icon_fg" src="/author/icon/Icons-Youtube.png" alt="youtube">
+          </div>
+
+          <div class="icon_box">
+            <img class="icon_bg" src="/author/box_images/ellipse.png" alt="">
+            <img class="icon_fg" src="/author/icon/Icons-dribbble.png" alt="dribbble">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="marginer"></div>
+
+      <!-- INFO -->
+      <div class="left_2">
+        <div class="info_row">
+          <span class="info_label">Age:</span>
+          <span class="info_value"><%= user.age %></span>
+        </div>
+
+        <div class="info_row">
+          <span class="info_label">Residence:</span>
+          <span class="info_value"><%= user.residence %></span>
+        </div>
+
+        <div class="info_row">
+          <span class="info_label">Freelance:</span>
+          <span class="info_value green">Available</span>
+        </div>
+
+        <div class="info_row">
+          <span class="info_label">Address:</span>
+          <span class="info_value"><%= user.address %></span>
+        </div>
+      </div>
+
+      <div class="marginer"></div>
+
+      <!-- LANGUAGES -->
+      <div class="left_3">
+        <h3 class="section_title">Languages</h3>
+
+        <% user.languages.forEach(lang => { %>
+          <div class="lang_item">
+            <div class="lang_top">
+              <span><%= lang.name %></span>
+              <span><%= lang.percent %>%</span>
+            </div>
+            <div class="lang_bar">
+              <div class="lang_fill" style="width:<%= lang.percent %>%"></div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+
+      <div class="marginer"></div>
+
+      <!-- SKILLS -->
+      <div class="left_4">
+        <h3 class="section_title">Skills</h3>
+
+        <% user.skills.forEach(skill => { %>
+          <div class="skill_item">
+            <div class="skill_top">
+              <span><%= skill.name %></span>
+              <span><%= skill.percent %>%</span>
+            </div>
+            <div class="skill_bar">
+              <div class="skill_fill" style="width:<%= skill.percent %>%"></div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+
+      <div class="marginer"></div>
+
+      <!-- EXTRA SKILLS -->
+      <div class="left_5">
+        <h3 class="section_title">Extra Skills</h3>
+
+        <% user.extra_skills.forEach(skill => { %>
+          <div class="extra_skill_item">
+            <img src="/author/icon/Icons.png" alt="">
+            <span><%= skill %></span>
+          </div>
+        <% }) %>
+      </div>
+
+    </div>
+    <!-- ============== END LEFT ================= -->
+
+
+    <!-- ================= MIDDLE CONTENT ================= -->
+    <div class="midd_frame">
+
+      <!-- HERO -->
+      <div class="hero">
+        <img src="/author/btn_item/ellipse16.svg" class="shape shape_1">
+        <img src="/author/btn_item/ellipse52.svg" class="shape shape_2">
+        <img src="/author/btn_item/square.svg" class="shape shape_3">
+
+        <div class="hero_left">
+          <h1>Doctor neurologists <br> in OHSU Hospital</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Et, volutpat feugiat placerat lobortis.
+          </p>
+          <button class="hero_btn">Hire Me →</button>
+        </div>
+
+        <div class="hero_right">
+          <img src="/author/images/profile1.png" alt="hero image">
+        </div>
+      </div>
+
+      <!-- MY SERVICES -->
+      <section class="services">
+        <h2 class="services_title">My Services</h2>
+
+        <p class="services_desc">
+          Amet Minim Mollit Non Deserunt Ullamco Est Sit Aliqua Dolor<br>
+          Do Amet Sint. Velit Officia Consequat Duis Enim Velit Mollit.
+        </p>
+
+        <div class="services_grid">
+          <% services.forEach(service => { %>
+            <div class="service_card">
+              <% if (service.icon) { %>
+                <img src="<%= service.icon %>" class="service_icon" alt="">
+              <% } %>
+              <h3 class="service_name"><%= service.title %></h3>
+              <p class="service_text"><%= service.text %></p>
+              <% if (service.link) { %>
+                <a href="<%= service.link %>" class="service_link">
+                  ORDER NOW →
+                </a>
+              <% } %>
+            </div>
+
+          <% }) %>
+        </div>
+      </section>
+
+    </div>
+    <!-- ============== END MIDDLE ================= -->
+
+
+    <!-- ================= RIGHT MENU ================= -->
+    <div class="right_frame">
+
+      <!-- THEME ICON -->
+      <div class="right_icon top_icon">
+        <img src="/author/right_icons/moon.svg" alt="theme">
+      </div>
+
+      <!-- MENU -->
+      <div class="right_menu">
+
+        <div class="right_icon active">
+          <img src="/author/right_icons/home.svg" alt="home">
+          <span class="tooltip">Home</span>
+        </div>
+
+        <div class="right_icon">
+          <img src="/author/right_icons/services.svg" alt="services">
+        </div>
+
+        <div class="right_icon">
+          <img src="/author/right_icons/resume.svg" alt="resume">
+        </div>
+
+        <div class="right_icon">
+          <img src="/author/right_icons/portfolio.svg" alt="portfolio">
+        </div>
+
+        <div class="right_icon">
+          <img src="/author/right_icons/contact.svg" alt="contact">
+        </div>
+
+      </div>
+    </div>
+    <!-- ============== END RIGHT ================= -->
+
+  </div>
+</div>
+
+</body>
+</html>
+
