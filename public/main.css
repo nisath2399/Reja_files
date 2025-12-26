@@ -19,7 +19,9 @@
     width: 1440px;
     display: flex;
     align-items: flex-start;
-    background-color: #f7f6b9;
+    background-color: #f4f4eb;
+     transform: scale(0.9);
+    transform-origin: top center;
 }
 
 /* ================= LEFT FRAME ================= */
