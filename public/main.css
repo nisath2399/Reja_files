@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+/* ================= OUTER FRAME ================= */
+.frame {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #e5e5e5;
+}
+
+/* ================= MAIN FRAME ================= */
+.main_frame {
+    width: 1440px;
+    display: flex;
+    align-items: flex-start;
+    background-color: #f7f6b9;
+}
+
+/* ================= LEFT FRAME ================= */
+.left_frame {
+    width: 305px;
+    height: 1315px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 0 40px;
+}
+
+/* PROFILE */
+.left_1 {
+    width: 228px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left_1-1 img {
+    width: 156px;
+    height: 156px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.left_1-2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.left_1-2 h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.left_1-2 p {
+    font-size: 14px;
+    color: #767676;
+    margin-top: 4px;
+}
+
+.left_icons {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.icon_box {
+    position: relative;
+    width: 26px;
+    height: 26px;
+}
+
+.icon_fg {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 14px;
+    height: 14px;
+}
+
+/* DIVIDER */
+.marginer {
+    width: 220px;
+    margin: 39px 0 25px;
+    border: 1.5px solid #f0f0f6;
+}
+
+/* INFO */
+.left_2 {
+    width: 221px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info_label {
+    background-color: #ffb400;
+    padding: 4px 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.info_value {
+    font-size: 13px;
+    color: #555;
+}
+
+.info_value.green {
+    color: #7eb942;
+}
+
+/* LANGUAGES & SKILLS */
+.left_3,
+.left_4,
+.left_5 {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.lang_item,
+.skill_item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.lang_top,
+.skill_top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #767676;
+}
+
+.lang_bar,
+.skill_bar {
+    width: 100%;
+    height: 4px;
+    background-color: #f0f0f6;
+    border-radius: 2px;
+}
+
+.lang_fill,
+.skill_fill {
+    height: 100%;
+    background-color: #ffb400;
+    border-radius: 2px;
+}
+
+/* EXTRA SKILLS */
+.extra_skill_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #767676;
+}
+
+.extra_skill_item img {
+    width: 14px;
+    height: 14px;
+}
+
+/* ================= MIDDLE FRAME ================= */
+.midd_frame {
+    width: 940px;
+    margin: 0 27px 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    width: 100%;
+    height: 463px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 60px 80px;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero_left {
+    width: 50%;
+    z-index: 2;
+}
+
+.hero_left h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #2b2b2b;
+}
+
+.hero_left p {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #767676;
+}
+
+.hero_btn {
+    margin-top: 30px;
+    padding: 14px 32px;
+    background-color: #ffb400;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hero_right {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.hero_right img {
+    width: 360px;
+}
+
+/* SHAPES */
+.shape {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    opacity: 0.9;
+}
+
+.shape_1 { top: 40px; left: 60px; }
+.shape_2 { bottom: 60px; left: 45%; }
+.shape_3 { top: 60px; right: 80px; }
+
+/* ================= SERVICES ================= */
+.services {
+    width: 100%;
+    margin-top: 30px;         
+    padding: 40px 40px;        
+    background-color: #f0f0f6;
+    border-radius: 12px;
+}
+
+.services_title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #2b2b2b;
+}
+
+.services_desc {
+    text-align: center;
+    max-width: 600px;
+    margin: 12px auto 0;      
+    font-size: 15px;
+    line-height: 1.5;          
+    color: #767676;
+}
+.services_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service_card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service_card:hover {
+    transform: translateY(-6px);
+}
+
+.service_icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+}
+
+.service_name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2b2b2b;
+}
+
+.service_text {
+    font-size: 14px;
+    color: #767676;
+    margin-top: 8px;
+}
+
+.service_link {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffb400;
+    text-decoration: none;
+}
+
+/* ================= RIGHT FRAME ================= */
+.right_frame {
+    width: 108px;
+    height: 1315px;
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TOP ICON */
+.top_icon {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* RIGHT MENU — MARKAZDA */
+.right_menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+    align-items: center;
+}
+
+.right_icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #f0f0f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.right_icon img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+}
+
+.right_icon.active {
+    background-color: #ffb400;
+}
+
+.right_icon.active img {
+    opacity: 1;
+    filter: brightness(0) invert(1);
+}
+
+.right_icon:hover {
+    background-color: #ffb400;
+}
+
+.right_icon:hover img {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+}
+
+.tooltip {
+    position: absolute;
+    right: 52px;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    white-space: nowrap;
+}
+
+.right_icon:hover .tooltip {
+    opacity: 1;
+}
+
+

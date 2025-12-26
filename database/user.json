@@ -3,10 +3,26 @@
   "profession": "Software Engineer",
   "age": 20,
   "residence": "S.Korea",
-  "adress": "S.Korea, Busan",
-  "languages": ["Uzbek", "Korean", "English"],
-  "skills": ["Html", "Css", "Js", "NodeJS", "Python"],
-  "extra_skills": ["Bootstrap","Materialize","Styling, Sass","Django, Flask","GIT Knowledge"],
+  "address": "S.Korea, Busan",
+  "languages": [
+  { "name": "Uzbek", "percent": 100 },
+  { "name": "Korean", "percent": 80 },
+  { "name": "English", "percent": 60 }
+],
+  "skills": [
+  { "name": "Html", "percent": 90 },
+  { "name": "CSS", "percent": 85 },
+  { "name": "JS", "percent": 80 },
+  { "name": "PHP", "percent": 75 },
+  { "name": "WordPress", "percent": 85 }
+],
+  "extra_skills": [
+  "Bootstrap",
+  "Materialize",
+  "Styling, Sass",
+  "Django, Flask",
+  "GIT Knowledge"
+],
   "work_place": "IT Company",
   "service_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
   "about_me": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis.",

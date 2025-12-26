@@ -33,8 +33,44 @@ app.post("/create-item", (req, res) =>{
 });
 
 app.get('/author', (req, res) => {
-    res.render('author', { user: user });
+    res.render('author', {
+        user: user,
+        services: [
+            {
+                icon: "/author/service_icon/Icons_coding.png",
+                title: "Web Development",
+                text: "Blog, E-Commerce"
+            },
+            {
+                icon: "/author/service_icon/Icons_illustration.png",
+                title: "UI/UX Design",
+                text: "Mobile App, Website Design"
+            },
+            {
+                icon: "/author/service_icon/Icons_Microphone.png",
+                title: "Sound Design",
+                text: "Voice Over, Beat Making"
+            },
+            {
+                icon: "/author/service_icon/Icons_game-development.png",
+                title: "Game Design",
+                text: "Character Design, Props & Objects"
+            },
+            {
+                icon: "/author/service_icon/picture.png",
+                title: "Photography",
+                text: "Portrait, Product Photography"
+            },
+            {
+                icon: "",
+                title: "Advertising",
+                text: "Lorem Ipsum Dolor Sit Amet",
+                link: "#"
+            }
+        ]
+    });
 });
+
 
 app.get("/", (req, res) => {
     res.render("harid")
