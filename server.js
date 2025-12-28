@@ -76,6 +76,10 @@ app.get("/", (req, res) => {
     res.render("harid")
 });
 
+app.get("/train", (req, res) => {
+    res.render("train")
+});
+
 
 const server = http.createServer(app);
 let PORT = 3000;
