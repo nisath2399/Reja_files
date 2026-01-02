@@ -96,16 +96,13 @@
 //   }
 // run();
 
-function countDigits(a) {
-  let count = 0;
-
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] >= '0' && a[i] <= '9') {
-      count++;
-    }
-  }
-
-  return count;
-}
-
-console.log(countDigits("ad2a54y79wet0sfgb9"));
+// function countDigits(a) {
+//   let count = 0;
+//   for (let i = 0; i < a.length; i++) {
+//     if (a[i] >= '0' && a[i] <= '9') {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(countDigits("ad2a54y79wet0sfgb9"));
