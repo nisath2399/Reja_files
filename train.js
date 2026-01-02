@@ -116,7 +116,7 @@ class Shop {
 
   qoldiq() {
     console.log(
-      "Do‘konda " +
+      "Dokonda " +
       this.non + " ta non, " +
       this.lagmon + " ta lag'mon va " +
       this.cola + " ta cola bor"
