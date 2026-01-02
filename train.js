@@ -106,3 +106,35 @@
 //   return count;
 // }
 // console.log(countDigits("ad2a54y79wet0sfgb9"));
+
+console.log("Task-C")
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  qoldiq() {
+    const time = new Date().getHours() + ":" + new Date().getMinutes();
+    console.log(
+      `Hozir ${time} da ${this.non} ta non, ${this.lagmon} ta lag'mon va ${this.cola} ta cola mavjud`
+    );
+  }
+
+  sotish(mahsulot, soni) {
+    this[mahsulot] = this[mahsulot] - soni;
+    console.log(`${soni} ta ${mahsulot} sotildi`);
+  }
+
+  qabul(mahsulot, soni) {
+    this[mahsulot] = this[mahsulot] + soni;
+    console.log(`${soni} ta ${mahsulot} qabul qilindi`);
+  }
+}
+
+const shop = new Shop(4, 5, 2);
+shop.qoldiq();
+shop.sotish("non", 3);
+shop.qabul("cola", 4);
+shop.qoldiq();
