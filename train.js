@@ -107,7 +107,6 @@
 // }
 // console.log(countDigits("ad2a54y79wet0sfgb9"));
 
-console.log("Task-C")
 class Shop {
   constructor(non, lagmon, cola) {
     this.non = non;
@@ -116,20 +115,22 @@ class Shop {
   }
 
   qoldiq() {
-    const time = new Date().getHours() + ":" + new Date().getMinutes();
     console.log(
-      `Hozir ${time} da ${this.non} ta non, ${this.lagmon} ta lag'mon va ${this.cola} ta cola mavjud`
+      "Do‘konda " +
+      this.non + " ta non, " +
+      this.lagmon + " ta lag'mon va " +
+      this.cola + " ta cola bor"
     );
   }
 
-  sotish(mahsulot, soni) {
-    this[mahsulot] = this[mahsulot] - soni;
-    console.log(`${soni} ta ${mahsulot} sotildi`);
+  sotish(nomi, soni) {
+    this[nomi] = this[nomi] - soni;
+    console.log(soni + " ta " + nomi + " sotildi");
   }
 
-  qabul(mahsulot, soni) {
-    this[mahsulot] = this[mahsulot] + soni;
-    console.log(`${soni} ta ${mahsulot} qabul qilindi`);
+  qabul(nomi, soni) {
+    this[nomi] = this[nomi] + soni;
+    console.log(soni + " ta " + nomi + " qabul qilindi");
   }
 }
 
