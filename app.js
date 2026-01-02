@@ -22,54 +22,35 @@ app.set("view engine", "ejs");
 //4 routing code
 
 app.post("/create-item", (req, res) =>{
+    console.log("User entered /created-item");
     console.log(req.body);
+    const new_reja = req.body.reja;
+    db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+        if (err) {
+            console.log(err);
+            res.end("Something went wrong");
+        }
+        else {
+            res.end("successfully added"); 
+        }
+    });
 });
-
-// app.get('/author', (req, res) => {
-//     res.render('author', {
-//         user: user,
-//         services: [
-//             {
-//                 icon: "/author/service_icon/Icons_coding.png",
-//                 title: "Web Development",
-//                 text: "Blog, E-Commerce"
-//             },
-//             {
-//                 icon: "/author/service_icon/Icons_illustration.png",
-//                 title: "UI/UX Design",
-//                 text: "Mobile App, Website Design"
-//             },
-//             {
-//                 icon: "/author/service_icon/Icons_Microphone.png",
-//                 title: "Sound Design",
-//                 text: "Voice Over, Beat Making"
-//             },
-//             {
-//                 icon: "/author/service_icon/Icons_game-development.png",
-//                 title: "Game Design",
-//                 text: "Character Design, Props & Objects"
-//             },
-//             {
-//                 icon: "/author/service_icon/picture.png",
-//                 title: "Photography",
-//                 text: "Portrait, Product Photography"
-//             },
-//             {
-//                 icon: "",
-//                 title: "Advertising",
-//                 text: "Lorem Ipsum Dolor Sit Amet",
-//                 link: "#"
-//             }
-//         ]
-//     });
-// });
-
 
 app.get("/", (req, res) => {
-    res.render("reja")
+    console.log("User entered /");
+    db.collection("plans").find()
+        .toArray((err, data) => {
+        if (err) {
+            console.log( err);
+            res.end("Something went wrong");
+        } else{
+            console.log(data);
+            res.render("reja", {items: data});
+        }   }
+    )
 });
-
-// app.get("/train", (req, res) => {
-//     res.render("train")
-// });
+app.get("/train", (req, res) => {
+    console.log("User entered /");
+    res.render("train")
+});
 module.exports = app;
