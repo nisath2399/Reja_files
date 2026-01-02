@@ -1,0 +1,75 @@
+console.log("Web serverni boshlash");
+const express = require("express");
+const app = express();
+const fs = require("fs");
+
+//Mongodb call
+const db = require("./server").db();
+
+//1 expressga kirib kevotgan ma`lumotlarni yozamiz
+//1: Kirish code
+app.use(express.static("public"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+//2: Session code
+
+//3 back-end da view yasimiz va uni clientga jonatamiz
+//3: Views code
+app.set("views", "views");
+app.set("view engine", "ejs");
+
+//4 routing code
+
+app.post("/create-item", (req, res) =>{
+    console.log(req.body);
+});
+
+// app.get('/author', (req, res) => {
+//     res.render('author', {
+//         user: user,
+//         services: [
+//             {
+//                 icon: "/author/service_icon/Icons_coding.png",
+//                 title: "Web Development",
+//                 text: "Blog, E-Commerce"
+//             },
+//             {
+//                 icon: "/author/service_icon/Icons_illustration.png",
+//                 title: "UI/UX Design",
+//                 text: "Mobile App, Website Design"
+//             },
+//             {
+//                 icon: "/author/service_icon/Icons_Microphone.png",
+//                 title: "Sound Design",
+//                 text: "Voice Over, Beat Making"
+//             },
+//             {
+//                 icon: "/author/service_icon/Icons_game-development.png",
+//                 title: "Game Design",
+//                 text: "Character Design, Props & Objects"
+//             },
+//             {
+//                 icon: "/author/service_icon/picture.png",
+//                 title: "Photography",
+//                 text: "Portrait, Product Photography"
+//             },
+//             {
+//                 icon: "",
+//                 title: "Advertising",
+//                 text: "Lorem Ipsum Dolor Sit Amet",
+//                 link: "#"
+//             }
+//         ]
+//     });
+// });
+
+
+app.get("/", (req, res) => {
+    res.render("reja")
+});
+
+// app.get("/train", (req, res) => {
+//     res.render("train")
+// });
+module.exports = app;
