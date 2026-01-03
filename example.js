@@ -7,16 +7,21 @@
 // A1
 // countLetter("a", "banana") ➜ 3
 function countLetterA1(letter, word) {
-    let count = 0;
-    for 
     // Yechimingiz
+    let count = 0;
+    for (let i=0; i<word.length; i++) {
+        if (word[i]===letter) {
+            count++
+        }
+    }
 }
 
-// A2
-// countLetter("o", "school") ➜ 2
-function countLetterA2(letter, word) {
-    // Yechimingiz
-}
+// // A2
+// // countLetter("o", "school") ➜ 2
+// function countLetterA2(letter, word) {
+//     // Yechimingiz
+// }
+
 
 // A3
 // countLetter("m", "programming") ➜ 2
