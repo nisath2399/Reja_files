@@ -136,3 +136,17 @@ class Shop {
 // const shop5 = new Shop(1, 1, 1);
 // shop5.sotish("cola", 1);
 // shop5.qoldiq();
+
+// E-TASK: 
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function getReverse(str) {
+    let reversed = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+}
+console.log(getReverse("hello")); 

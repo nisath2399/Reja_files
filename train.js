@@ -144,40 +144,49 @@
 
 // 1 version
 
-function countContent(word1, word2) {
-    if (word1.length !== word2.length) {
-        return false;
+// function countContent(word1, word2) {
+//     if (word1.length !== word2.length) {
+//         return false;
+//     }
+
+//     let a = word1.split("").sort().join("")
+//     let b = word2.split("").sort().join("")
+
+//         return a === b;
+// }
+// console.log(countContent("mitgroup", "gmtiprou"));
+
+// //2-version
+
+// function countContent(word1, word2) {
+//     if (word1.length !== word2.length) {
+//         return false;
+//     }
+//     function helper(word, letter) {
+//         let count = 0;
+//         for (let i = 0; i < word.length; i++) {
+//             if (word[i] === letter) {
+//                 count++;
+//             }
+//         }
+//         return count;
+//     }
+//     for (let i = 0; i < word1.length; i++) {
+//         if (helper(word1, word1[i]) !== helper(word2, word1[i])) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// console.log(countContent("mitgroup", "gmtiprou"));
+
+
+function getReverse(str) {
+    let reversed = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
     }
-
-    let a = word1.split("").sort().join("")
-    let b = word2.split("").sort().join("")
-
-        return a === b;
+    return reversed;
 }
-console.log(countContent("mitgroup", "gmtiprou"));
-
-//2-version
-
-function countContent(word1, word2) {
-    if (word1.length !== word2.length) {
-        return false;
-    }
-    function helper(word, letter) {
-        let count = 0;
-        for (let i = 0; i < word.length; i++) {
-            if (word[i] === letter) {
-                count++;
-            }
-        }
-        return count;
-    }
-    for (let i = 0; i < word1.length; i++) {
-        if (helper(word1, word1[i]) !== helper(word2, word1[i])) {
-            return false;
-        }
-    }
-    return true;
-}
-
-console.log(countContent("mitgroup", "gmtiprou"));
-
+console.log(getReverse("hello")); 
