@@ -182,11 +182,31 @@
 // console.log(countContent("mitgroup", "gmtiprou"));
 
 
-function getReverse(str) {
-    let reversed = "";
-    for (let i = str.length - 1; i >= 0; i--) {
-        reversed += str[i];
+// function getReverse(str) {
+//     let reversed = "";
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         reversed += str[i];
+//     }
+//     return reversed;
+// }
+// console.log(getReverse("hello")); 
+
+function findDoublers(str) {
+  for (let i = 0; i < str.length - 1; i++) {
+    if (str[i] === str[i + 1]) {
+      return true;
     }
-    return reversed;
+  }
+  return false;
 }
-console.log(getReverse("hello")); 
+
+console.log(findDoublers("hello"));
+
+
+
+
+
+
+
+
+
