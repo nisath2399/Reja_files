@@ -1,12 +1,12 @@
-Reja Application
+## Reja Application
 
-📌 Project Overview
+## 📌 Project Overview
 Reja Application is a full-stack web application built using Node.js, Express, MongoDB, and EJS.
 The frontend is rendered using EJS templates (server-side rendering), and the backend is structured using Express routing.
 This project demonstrates full-stack fundamentals including server setup, routing, database integration, and dynamic page rendering.
 
 
-🚀 Features
+## 🚀 Features
 Express.js server setup
 Dynamic routing
 Server-side rendering with EJS
@@ -15,7 +15,7 @@ Basic CRUD operations
 Development mode using Nodemon
 
 
-🛠 Tech Stack
+## 🛠 Tech Stack
 Backend
 Node.js
 Express.js
